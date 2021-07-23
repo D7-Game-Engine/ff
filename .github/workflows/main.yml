@@ -31,8 +31,9 @@ jobs:
           pip3 install youtube-dl
           youtube-dl --continue --ignore-errors --no-overwrites --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" https://youtube.com/playlist?list=PLY5s-TPRHgYZ4nSCWemH08udN16nPzFW6
           ls -r
-          7z a music.zip .\*
+          7z a music.zip *.mp3
           git config --global user.email "tobid7@outlook.de"
           git config --global user.name "Tobi-D7"
           git stage music.zip
+          git commit -m "m"
           git push origin main
