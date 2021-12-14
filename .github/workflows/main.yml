@@ -29,9 +29,9 @@ jobs:
         run: |
           sudo apt-get install p7zip-full ffmpeg -y
           pip3 install youtube-dl
-          youtube-dl --continue --ignore-errors --no-overwrites --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" https://youtube.com/playlist?list=PLY5s-TPRHgYZ4nSCWemH08udN16nPzFW6
+          youtube-dl --continue --ignore-errors --no-overwrites --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" https://youtube.com/playlist?list=PLDSE2N1Th_NutmMrYXg2sDGObFRfFHJcK
           ls -r
-          7z a musics.zip *.mp3
+          7z a 30.zip *.mp3
           git config --global user.email "tobid7@outlook.de"
           git config --global user.name "Tobi-D7"
           git stage musics.zip
